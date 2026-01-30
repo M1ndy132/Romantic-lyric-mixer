@@ -1,17 +1,3 @@
-"""- **WEEK 6: Romantic Lyric Mixer**
-**Constraints:**
-- Use ONLY: string methods, lists, `random`
-- 2 lists of 5 phrases each
-- Combine exactly 2 phrases per line
-- No rhyme detection
-- No grammar correction
-- Output 5 lines maximum
-
-**Requirements:**
-- Generate 5 mixed lines
-- Display each line
-- Option to regenerate"""
-
 import random
 
 Phrase_1 = ["You're written in every beat of my heart", 
@@ -27,7 +13,31 @@ Pharse_2 = ["With you, I've found my forever",
             "I'd choose you in every universe"]
 
 
+def lyric_mix():
+    while True:
+        list_1 = Phrase_1.copy()
+        list_2 = Pharse_2.copy()
+            
+        for i in range(1, 6):
+            chosen_phrase_1 = random.choice(list_1)
+            chosen_phrase_2 = random.choice(list_2)
 
+            list_1.remove(chosen_phrase_1)
+            list_2.remove(chosen_phrase_2)
+
+            print(f"{str(i)}. {chosen_phrase_1}, {chosen_phrase_2}")
+
+    
+        confirm = input("Would you like to generate 5 more? (yes/no): ").strip().lower()
+
+        if confirm.startswith("n"):
+            break
+        elif confirm.startswith("y"):
+            continue
+        else:
+            continue
+
+lyric_mix()
 
 
 
