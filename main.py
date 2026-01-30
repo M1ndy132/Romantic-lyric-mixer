@@ -37,7 +37,23 @@ def lyric_mix():
         else:
             continue
 
-lyric_mix()
+
+print("We got two lists, each with five phrases.")
+print("While it ain't much, we get by.")
+print("So hop on in and generate your five romanctic lyrics.")
+print("If you do it just right, and have some game to your name, you'll be alright.")
+
+while option := input("Generate or no?: ").strip().capitalize():
+    match option:
+        case "Generate":
+            lyric_mix()
+        case "No":
+            print("Go and work magic rizzler/ette!!!")
+            print("See you next time, maybe you'll be able add your own lines. :)\n" \
+            "My smile looks so believable, I know. ")
+            break
+
+
 
 
 
